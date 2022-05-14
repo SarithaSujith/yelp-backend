@@ -16,8 +16,10 @@ db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to Mongoose.'));
 
 app.use(cors({ origin: CORS }));
+//built in middleware function in Express starting from v4.16.0. It parses incoming JSON requests and puts the parsed data in req.body. Without this, req.body would be undefined.
+
 app.use(express.json());
-
+//appending to the route
 app.use('/api', getHospitals);
-
+//listen to the port
 app.listen(port, () => console.log(`server started on port ${port}`));

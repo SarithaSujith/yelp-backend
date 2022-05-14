@@ -1,7 +1,5 @@
 import Hospital from '../models/hospital.js';
 
-
-//CRUD operarion goes here
 export const getHospitals = async (req, res) => {
 	try {
 		const hospitals = await Hospital.find({});
@@ -13,14 +11,14 @@ export const getHospitals = async (req, res) => {
 
 export const postHospital = async (req, res) => {
 	try {
-		const { name, addresse, city, description } = req.body;
-		const hospitals = await Hospital.create({
+		const { name, address, city, description } = req.body;
+		const hospital = await Hospital.create({
 			name,
-			addresse,
+			address,
 			city,
 			description,
 		});
-		await res.json(hospitals);
+		await res.json(hospital);
 	} catch (error) {
 		res.status(500).send('Error posting hospital');
 	}
@@ -35,12 +33,12 @@ export const getHospitalById = async (req, res) => {
 		res.status(500).send('Error getting hospital');
 	}
 };
-//used regex for quering 
+
 export const getHospitalsByKeyword = async (req, res) => {
 	try {
 		const { keyword } = req.params;
 		const hospitals = await Hospital.find({
-			name: { $regex: keyword },
+			name: { $regex: keyword, $options: '$i' },
 		});
 
 		await res.json(hospitals);
