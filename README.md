@@ -35,8 +35,11 @@ Returns a single hospital
 {
 
 "name": "Waldkrankenhaus",
+
 "address": "Friedrischshtrasse 13",
+
 "city": "Berlin",
+
 "description": "Discription regarding the following krankenhaus",
 
 }
