@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import getHospitals from './routes/hospital.js';
 
-const { PORT, MNG_DB, CORS } = process.env;
+const { PORT, MNG_DB } = process.env;
 const port = PORT || 5000;
 
 const app = express();
