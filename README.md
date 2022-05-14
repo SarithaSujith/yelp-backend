@@ -2,7 +2,9 @@
 
 ## Table of contents
 
--[GET all hospitals](https://yelpbackend.herokuapp.com/api/hospitals/) -[GET a single hospital by id](https://yelpbackend.herokuapp.com/api/hospital/:id)
+-[GET all hospitals](https://yelpbackend.herokuapp.com/api/hospitals/)
+
+-[GET a single hospital by id](https://yelpbackend.herokuapp.com/api/hospital/:id)
 
 ### GET all hospitals
 
