@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const HospitalSchema = Schema({
 	name: String,
-	addresse: String,
+	address: String,
 	city: String,
 	description: String,
 	tags: [String],

@@ -15,7 +15,7 @@ const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to Mongoose.'));
 
-app.use(cors({ origin: CORS }));
+app.use(cors());
 //built in middleware function in Express starting from v4.16.0. It parses incoming JSON requests and puts the parsed data in req.body. Without this, req.body would be undefined.
 
 app.use(express.json());
